@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(59, 130, 246, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(59, 130, 246, 1);
+	min-height: 100px;
+}
+
+.section {
+	@apply px-4 py-[4rem];
+}
+
+.container-mod {
+	@apply container mx-auto max-w-5xl;
+}
+
+.container-mod-small {
+	@apply container mx-auto max-w-3xl;
+}
+
+.error {
+	@apply font-medium text-red-500 font-mono;
+}
+
+.required {
+	@apply font-medium text-red-500 text-lg mx-1;
+}
+
+.btn-primary {
+	@apply py-2 px-4 rounded-md bg-blue-600 text-gray-50 
+	active:bg-opacity-50
+	hover:bg-blue-800 transition-all duration-200 sm:text-lg
+	disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+	@apply transition-all duration-200 rounded-md px-4 py-2 
+	active:bg-opacity-50
+	space-x-1 border-2 border-gray-500/75
+	disabled:cursor-not-allowed disabled:opacity-50;
+}
