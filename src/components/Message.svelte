@@ -39,7 +39,7 @@
 
 	async function changeMessageStatus() {
 		loading = true;
-		const response = await fetch("/api/changeMessageStatus", {
+		const response = await fetch("/api/messages", {
 			method: "POST",
 			body: JSON.stringify({ message_id: id }),
 			headers: {
